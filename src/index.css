@@ -43,8 +43,9 @@
 
     /* Custom Design Tokens */
     --gold: 43 57% 23%;
-    --gold-light: 43 45% 55%;
+    --gold-light: 46 76% 73%;
     --gold-dark: 43 65% 15%;
+    --gold-accent: 46 76% 73%;
     --cream: 40 33% 97%;
     --cream-dark: 38 25% 92%;
     --charcoal: 30 10% 15%;
