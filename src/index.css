@@ -51,6 +51,9 @@
     --charcoal-light: 30 8% 35%;
     --terracotta: 25 45% 35%;
     --sage: 120 15% 40%;
+    --teal: 173 36% 60%;
+    --teal-dark: 173 36% 45%;
+    --teal-foreground: 0 0% 100%;
 
     /* Typography */
     --font-display: 'Playfair Display', Georgia, serif;
