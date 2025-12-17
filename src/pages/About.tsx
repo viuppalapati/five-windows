@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import johannaImage from "@/assets/johanna-headshot.webp";
+import veniceImage from "@/assets/venice-five-windows.jpg";
 
 const About = () => {
   return (
@@ -61,24 +62,34 @@ const About = () => {
 
       {/* About Five Windows */}
       <section className="py-20 md:py-32 bg-teal text-teal-foreground">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl mb-6">
-              About Five Windows
-            </h2>
-            <div className="w-16 h-0.5 bg-teal-foreground/50 mx-auto" />
-          </div>
-          
-          <div className="space-y-8 text-lg leading-relaxed">
-            <p>
-              In the historic Jewish ghetto of Venice, there's a quiet detail: five windows signify the building is a synagogue. From the outside, these structures are modest — even unremarkable. But step inside, and you find spaces of extraordinary beauty, history, and reverence.
-            </p>
-            <p>
-              That image stayed with me. It felt like a perfect metaphor for long-term romantic partnership. A relationship that, on the surface, may look ordinary, well-worn, even predictable — but within holds decades of shared experience, resilience, and unspoken depth.
-            </p>
-            <p>
-              Five Windows is for couples who've built lives, raised families, weathered seasons, and created legacy — and now find themselves at a threshold. The roles they've played are shifting. The noise is quieting. And what's left is a single, potent question: <span className="font-display italic">What now?</span>
-            </p>
+        <div className="max-w-6xl mx-auto px-6 md:px-12">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div>
+              <div className="aspect-[4/3] overflow-hidden shadow-medium">
+                <img
+                  src={veniceImage}
+                  alt="Historic Venice building with five windows"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="font-display text-3xl md:text-4xl mb-6">
+                About Five Windows
+              </h2>
+              <div className="w-16 h-0.5 bg-teal-foreground/50 mb-8" />
+              <div className="space-y-6 text-lg leading-relaxed">
+                <p>
+                  In the historic Jewish ghetto of Venice, there's a quiet detail: five windows signify the building is a synagogue. From the outside, these structures are modest — even unremarkable. But step inside, and you find spaces of extraordinary beauty, history, and reverence.
+                </p>
+                <p>
+                  That image stayed with me. It felt like a perfect metaphor for long-term romantic partnership. A relationship that, on the surface, may look ordinary, well-worn, even predictable — but within holds decades of shared experience, resilience, and unspoken depth.
+                </p>
+                <p>
+                  Five Windows is for couples who've built lives, raised families, weathered seasons, and created legacy — and now find themselves at a threshold. The roles they've played are shifting. The noise is quieting. And what's left is a single, potent question: <span className="font-display italic">What now?</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

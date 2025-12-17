@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-gold-texture.jpg";
 import johannaImage from "@/assets/johanna-headshot.webp";
 import blogImage from "@/assets/blog-five-windows.jpg";
+import veniceImage from "@/assets/venice-five-windows.jpg";
 
 const Index = () => {
   const scrollToQuote = () => {
@@ -110,24 +111,34 @@ const Index = () => {
 
       {/* The Name Section */}
       <section className="py-20 md:py-32 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl mb-6">
-              The Name
-            </h2>
-            <div className="w-16 h-0.5 bg-primary-foreground/50 mx-auto" />
-          </div>
-          
-          <div className="space-y-6 text-center">
-            <p className="text-lg md:text-xl leading-relaxed opacity-95">
-              Five Windows comes from the historic Jewish ghetto in Venice, where synagogues were concealed inside ordinary buildings. From the outside, they were intentionally discreet—almost invisible. But for those who knew, five windows on the façade signaled a sacred interior: a refuge shaped by culture, devotion, resilience, and belonging.
-            </p>
-            <p className="text-lg md:text-xl leading-relaxed opacity-95">
-              Long-term partnership is much the same.
-            </p>
-            <p className="font-display text-xl md:text-2xl italic opacity-90 mt-8">
-              Extraordinary but rarely showy. Cherished by those who live inside it. Recognizable only to those who have traveled this far.
-            </p>
+        <div className="max-w-6xl mx-auto px-6 md:px-12">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl mb-6">
+                The Name
+              </h2>
+              <div className="w-16 h-0.5 bg-primary-foreground/50 mb-8" />
+              <div className="space-y-6">
+                <p className="text-lg md:text-xl leading-relaxed opacity-95">
+                  Five Windows comes from the historic Jewish ghetto in Venice, where synagogues were concealed inside ordinary buildings. From the outside, they were intentionally discreet—almost invisible. But for those who knew, five windows on the façade signaled a sacred interior: a refuge shaped by culture, devotion, resilience, and belonging.
+                </p>
+                <p className="text-lg md:text-xl leading-relaxed opacity-95">
+                  Long-term partnership is much the same.
+                </p>
+                <p className="font-display text-xl md:text-2xl italic opacity-90 mt-8">
+                  Extraordinary but rarely showy. Cherished by those who live inside it. Recognizable only to those who have traveled this far.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div className="aspect-[4/3] overflow-hidden shadow-medium">
+                <img
+                  src={veniceImage}
+                  alt="Historic Venice building with five windows"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -305,7 +316,7 @@ const Index = () => {
             <Button variant="gold" size="lg" asChild>
               <Link to="/contact">Request an Invitation</Link>
             </Button>
-            <Button variant="outline-gold" size="lg" asChild>
+            <Button variant="outline-light" size="lg" asChild>
               <Link to="/listen-in">Listen In</Link>
             </Button>
           </div>

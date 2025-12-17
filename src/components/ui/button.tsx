@@ -19,6 +19,8 @@ const buttonVariants = cva(
         gold: "bg-primary text-primary-foreground tracking-widest uppercase font-semibold hover:bg-primary/90 shadow-soft hover:shadow-gold",
         "outline-gold": "border-2 border-primary bg-transparent text-primary tracking-widest uppercase font-semibold hover:bg-primary hover:text-primary-foreground",
         "ghost-gold": "text-primary tracking-widest uppercase font-medium hover:bg-primary/10",
+        // Light variants for dark backgrounds
+        "outline-light": "border-2 border-primary-foreground bg-transparent text-primary-foreground tracking-widest uppercase font-semibold hover:bg-primary-foreground hover:text-primary",
       },
       size: {
         default: "h-10 px-4 py-2",
