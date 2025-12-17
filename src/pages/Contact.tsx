@@ -5,7 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Mail } from "lucide-react";
+import { Mail, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -175,9 +176,20 @@ const Contact = () => {
                 <h3 className="font-display text-xl mb-4">
                   Share Your Perspective
                 </h3>
-                <p className="leading-relaxed opacity-95">
+                <p className="leading-relaxed opacity-95 mb-6">
                   What's your point of view on this stage of partnership? I'd love to hear your thoughts and reflections.
                 </p>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-teal-foreground text-teal-foreground bg-transparent hover:bg-teal-foreground hover:text-teal" 
+                  asChild
+                >
+                  <Link to="/share-perspective">
+                    Take the Survey
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>

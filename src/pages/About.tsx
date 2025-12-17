@@ -110,14 +110,29 @@ const About = () => {
             Connect with Five Windows
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <Link to="/contact">Share your Perspective</Link>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary" 
+              asChild
+            >
+              <Link to="/share-perspective">Share Your Perspective</Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <Link to="/contact">Stay in the Loop</Link>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary" 
+              asChild
+            >
+              <Link to="/stay-connected">Stay Connected</Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <Link to="/blog">Read the Blog</Link>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary" 
+              asChild
+            >
+              <Link to="/listen-in">Listen In</Link>
             </Button>
           </div>
         </div>

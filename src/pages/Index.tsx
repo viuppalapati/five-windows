@@ -7,6 +7,13 @@ import johannaImage from "@/assets/johanna-headshot.webp";
 import blogImage from "@/assets/blog-five-windows.jpg";
 
 const Index = () => {
+  const scrollToQuote = () => {
+    const quoteSection = document.getElementById('quote-section');
+    if (quoteSection) {
+      quoteSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -36,15 +43,15 @@ const Index = () => {
             <Button variant="gold" size="lg" asChild>
               <Link to="/contact">Request an Invitation</Link>
             </Button>
-            <Button variant="outline-gold" size="lg" asChild>
-              <Link to="/about">Learn More</Link>
+            <Button variant="outline-gold" size="lg" onClick={scrollToQuote}>
+              Learn More
             </Button>
           </div>
         </div>
       </section>
 
       {/* Quote Section */}
-      <section className="py-20 md:py-32 bg-background">
+      <section id="quote-section" className="py-20 md:py-32 bg-background">
         <div className="max-w-3xl mx-auto px-6 md:px-12 text-center">
           <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground italic leading-relaxed mb-8 animate-fade-in-up">
             "My partner helped me become who I want to be…the road ahead looks entirely do-able and beautiful."
@@ -155,12 +162,32 @@ const Index = () => {
               <div className="mt-10">
                 <Button variant="gold" size="lg" asChild>
                   <Link to="/about">
-                    Learn More About Five Windows
+                    Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Connect with Five Windows Section */}
+      <section className="py-20 md:py-32 bg-gold-accent">
+        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
+          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-10">
+            Connect with Five Windows
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="gold" size="lg" asChild>
+              <Link to="/share-perspective">Share Your Perspective</Link>
+            </Button>
+            <Button variant="gold" size="lg" asChild>
+              <Link to="/stay-connected">Stay Connected</Link>
+            </Button>
+            <Button variant="gold" size="lg" asChild>
+              <Link to="/listen-in">Listen In</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -275,11 +302,11 @@ const Index = () => {
           </h2>
           <div className="w-16 h-0.5 bg-teal-foreground/50 mx-auto mb-10" />
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" className="border-teal-foreground text-teal-foreground hover:bg-teal-foreground hover:text-teal" asChild>
+            <Button variant="gold" size="lg" asChild>
               <Link to="/contact">Request an Invitation</Link>
             </Button>
-            <Button variant="ghost" size="lg" className="text-teal-foreground hover:bg-teal-foreground/10" asChild>
-              <Link to="/blog">Read the Blog</Link>
+            <Button variant="outline-gold" size="lg" asChild>
+              <Link to="/listen-in">Listen In</Link>
             </Button>
           </div>
         </div>
