@@ -73,6 +73,11 @@ export default {
         },
         terracotta: "hsl(var(--terracotta))",
         sage: "hsl(var(--sage))",
+        teal: {
+          DEFAULT: "hsl(var(--teal))",
+          dark: "hsl(var(--teal-dark))",
+          foreground: "hsl(var(--teal-foreground))",
+        },
       },
       fontFamily: {
         display: ["Playfair Display", "Georgia", "serif"],

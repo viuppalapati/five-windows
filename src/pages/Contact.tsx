@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -41,8 +41,14 @@ const Contact = () => {
           </h1>
           <div className="w-16 h-0.5 bg-primary mx-auto mb-8" />
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Whether you're seeking couples therapy, discernment counseling, or simply want to learn more about Five Windows, I'd love to hear from you.
+            For further inquiries, please contact me at:
           </p>
+          <a 
+            href="mailto:inquiries@drherwitz.com" 
+            className="text-xl md:text-2xl text-primary hover:underline font-display mt-4 inline-block"
+          >
+            inquiries@drherwitz.com
+          </a>
         </div>
       </section>
 
@@ -137,56 +143,40 @@ const Contact = () => {
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-lg text-foreground mb-2">Office Location</h3>
-                    <p className="text-muted-foreground">
-                      Upper East Side<br />
-                      New York City, NY
-                    </p>
-                    <p className="text-muted-foreground mt-2 text-sm">
-                      In-person and virtual sessions available
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-display text-lg text-foreground mb-2">Email</h3>
                     <a 
-                      href="mailto:contact@thefivewindows.com" 
+                      href="mailto:inquiries@drherwitz.com" 
                       className="text-primary hover:underline"
                     >
-                      contact@thefivewindows.com
+                      inquiries@drherwitz.com
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-lg text-foreground mb-2">Licensed In</h3>
-                    <p className="text-muted-foreground">
-                      New York • California • Connecticut<br />
-                      Washington DC • Florida
-                    </p>
                   </div>
                 </div>
               </div>
 
-              {/* Additional Info */}
+              {/* Additional Info Card */}
               <div className="mt-12 p-8 bg-card border border-border/50">
                 <h3 className="font-display text-xl text-foreground mb-4">
-                  Scheduling Information
+                  Request an Invitation
                 </h3>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  A simple, private inquiry to see whether Five Windows is the right fit for you and your partner.
+                </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  For inquiries about couples therapy, individual therapy, or discernment counseling, please use the contact form or email directly. I typically respond within 24-48 business hours.
+                  I typically respond within 24-48 business hours.
+                </p>
+              </div>
+
+              {/* Share Perspective Card */}
+              <div className="mt-6 p-8 bg-teal text-teal-foreground">
+                <h3 className="font-display text-xl mb-4">
+                  Share Your Perspective
+                </h3>
+                <p className="leading-relaxed opacity-95">
+                  What's your point of view on this stage of partnership? I'd love to hear your thoughts and reflections.
                 </p>
               </div>
             </div>
@@ -198,9 +188,8 @@ const Contact = () => {
       <section className="py-20 md:py-32 bg-primary text-primary-foreground">
         <div className="max-w-3xl mx-auto px-6 md:px-12 text-center">
           <blockquote className="font-display text-2xl md:text-3xl italic leading-relaxed">
-            "The beginning of love is to let those we love be perfectly themselves."
+            "Thank you for making me reflect on what I want in this time of life."
           </blockquote>
-          <p className="text-primary-foreground/70 mt-6">— Thomas Merton</p>
         </div>
       </section>
     </Layout>
