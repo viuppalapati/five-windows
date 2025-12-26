@@ -3,6 +3,9 @@ import Layout from "@/components/layout/Layout";
 import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-gold-texture.jpg";
 import veniceImage from "@/assets/venice-five-windows.jpg";
+import retreatImage from "@/assets/retreat-terrace.jpg";
+import diningImage from "@/assets/intimate-dining.jpg";
+import suiteImage from "@/assets/serene-suite.jpg";
 import VideoModal from "@/components/VideoModal";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 
@@ -122,6 +125,15 @@ const Index = () => {
             </p>
           </ScrollReveal>
         </div>
+      </section>
+
+      {/* Image Break - Full Width */}
+      <section className="w-full">
+        <HoverImage
+          src={retreatImage}
+          alt="Luxury retreat terrace at golden hour"
+          className="w-full aspect-[21/9]"
+        />
       </section>
 
       {/* Five Windows Weekend Section - Full Width Background */}
@@ -255,6 +267,20 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Two Image Grid */}
+      <section className="w-full grid md:grid-cols-2">
+        <HoverImage
+          src={diningImage}
+          alt="Intimate candlelit dining"
+          className="w-full aspect-square"
+        />
+        <HoverImage
+          src={suiteImage}
+          alt="Serene luxury suite"
+          className="w-full aspect-square"
+        />
+      </section>
+
       {/* Weekend at a Glance - Full Width Gold */}
       <section className="py-32 md:py-48 lg:py-64 bg-gold-accent w-full">
         <div className="max-w-5xl mx-auto px-8 md:px-16 text-center">
@@ -301,9 +327,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* For Couples Who - Clean Minimal */}
-      <section className="py-32 md:py-48 lg:py-64 bg-cream w-full">
-        <div className="max-w-4xl mx-auto px-8 md:px-16">
+      {/* For Couples Who - Condensed Grid */}
+      <section className="py-32 md:py-48 bg-cream w-full">
+        <div className="max-w-6xl mx-auto px-8 md:px-16">
           <ScrollReveal>
             <div className="text-center">
               <span className="text-charcoal/60 text-sm tracking-[0.3em] uppercase">For You</span>
@@ -314,31 +340,32 @@ const Index = () => {
             </div>
           </ScrollReveal>
           
-          <ul className="mt-16 md:mt-24 space-y-6 md:space-y-8 max-w-2xl mx-auto">
+          {/* Condensed 2-column grid */}
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 mt-16 md:mt-20 max-w-4xl mx-auto">
             {[
-              "have been together for decades and still enjoy each other's company",
-              "feel proud of and grateful for what they've built",
-              "value privacy, discretion and autonomy",
-              "understand that occasional inconvenience is part of supporting one another — and do so willingly",
-              "are not interested in therapy or self-improvement programs",
-              "are comfortable in exquisite accommodations in beautiful places"
+              "Have been together for decades and still enjoy each other's company",
+              "Feel proud of and grateful for what they've built",
+              "Value privacy, discretion and autonomy",
+              "Are not interested in therapy or self-improvement programs",
+              "Support one another willingly through occasional inconvenience",
+              "Are comfortable in exquisite accommodations in beautiful places"
             ].map((item, index) => (
-              <ScrollReveal key={index} delay={0.08 * index}>
-                <motion.li 
-                  className="flex items-start gap-6 text-charcoal-light text-base md:text-lg lg:text-xl leading-relaxed py-4"
-                  whileHover={{ x: 8 }}
+              <ScrollReveal key={index} delay={0.05 * index}>
+                <motion.div 
+                  className="flex items-start gap-4 py-3"
+                  whileHover={{ x: 4 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <span className="w-1.5 h-1.5 bg-primary rounded-full mt-3 flex-shrink-0" />
-                  <span>{item}</span>
-                </motion.li>
+                  <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2.5 flex-shrink-0" />
+                  <span className="text-charcoal-light text-base md:text-lg leading-relaxed">{item}</span>
+                </motion.div>
               </ScrollReveal>
             ))}
-          </ul>
+          </div>
 
-          <ScrollReveal delay={0.6}>
-            <div className="text-center mt-20 md:mt-32">
-              <p className="text-charcoal/80 text-lg md:text-xl italic mb-12">
+          <ScrollReveal delay={0.4}>
+            <div className="text-center mt-16 md:mt-20">
+              <p className="text-charcoal/80 text-lg md:text-xl italic mb-10">
                 If you identify yourself as one of these rare couples, you are invited to
               </p>
               <motion.button
@@ -354,6 +381,42 @@ const Index = () => {
               >
                 Request an Invitation
               </motion.button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Branding / Credentials Section */}
+      <section className="py-16 md:py-20 bg-teal/10 w-full">
+        <div className="max-w-5xl mx-auto px-8 md:px-16">
+          <ScrollReveal>
+            <p className="text-center text-charcoal/50 text-xs tracking-[0.2em] uppercase mb-10">
+              Professional Affiliations
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16 lg:gap-20 opacity-60">
+              {/* Placeholder logos - replace with actual credential logos */}
+              <div className="text-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-charcoal/20 flex items-center justify-center">
+                  <span className="text-charcoal/60 text-[10px] md:text-xs text-center leading-tight px-2">Master<br/>Mentoring</span>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-charcoal/20 flex items-center justify-center">
+                  <span className="text-charcoal/60 text-[10px] md:text-xs text-center leading-tight px-2">Educaring</span>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-charcoal/20 flex items-center justify-center">
+                  <span className="text-charcoal/60 text-[10px] md:text-xs text-center leading-tight px-2">National<br/>Register</span>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-charcoal/20 flex items-center justify-center">
+                  <span className="text-charcoal/60 text-[10px] md:text-xs text-center leading-tight px-2">APA</span>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
         </div>
