@@ -399,11 +399,11 @@ const Index = () => {
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16 lg:gap-20">
-              <img src={logoCouplesInstitute} alt="Couples Institute" className="h-16 md:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={logoEducaring} alt="Educaring" className="h-16 md:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={logoNationalRegister} alt="National Register of Health Service Psychologists" className="h-16 md:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={logoAPA} alt="American Psychological Association" className="h-16 md:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+            <div className="flex items-center justify-center gap-8 md:gap-12 lg:gap-16">
+              <img src={logoCouplesInstitute} alt="Couples Institute" className="h-10 md:h-12 lg:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={logoEducaring} alt="Educaring" className="h-10 md:h-12 lg:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={logoNationalRegister} alt="National Register of Health Service Psychologists" className="h-10 md:h-12 lg:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={logoAPA} alt="American Psychological Association" className="h-10 md:h-12 lg:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
             </div>
           </ScrollReveal>
         </div>
