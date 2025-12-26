@@ -6,6 +6,10 @@ import veniceImage from "@/assets/venice-five-windows.jpg";
 import retreatImage from "@/assets/retreat-terrace.jpg";
 import diningImage from "@/assets/intimate-dining.jpg";
 import suiteImage from "@/assets/serene-suite.jpg";
+import logoCouplesInstitute from "@/assets/logo-couples-institute.webp";
+import logoEducaring from "@/assets/logo-educaring.webp";
+import logoNationalRegister from "@/assets/logo-national-register.webp";
+import logoAPA from "@/assets/logo-apa.webp";
 import VideoModal from "@/components/VideoModal";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 
@@ -395,28 +399,11 @@ const Index = () => {
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16 lg:gap-20 opacity-60">
-              {/* Placeholder logos - replace with actual credential logos */}
-              <div className="text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-charcoal/20 flex items-center justify-center">
-                  <span className="text-charcoal/60 text-[10px] md:text-xs text-center leading-tight px-2">Master<br/>Mentoring</span>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-charcoal/20 flex items-center justify-center">
-                  <span className="text-charcoal/60 text-[10px] md:text-xs text-center leading-tight px-2">Educaring</span>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-charcoal/20 flex items-center justify-center">
-                  <span className="text-charcoal/60 text-[10px] md:text-xs text-center leading-tight px-2">National<br/>Register</span>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-charcoal/20 flex items-center justify-center">
-                  <span className="text-charcoal/60 text-[10px] md:text-xs text-center leading-tight px-2">APA</span>
-                </div>
-              </div>
+            <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16 lg:gap-20">
+              <img src={logoCouplesInstitute} alt="Couples Institute" className="h-16 md:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={logoEducaring} alt="Educaring" className="h-16 md:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={logoNationalRegister} alt="National Register of Health Service Psychologists" className="h-16 md:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={logoAPA} alt="American Psychological Association" className="h-16 md:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
             </div>
           </ScrollReveal>
         </div>
