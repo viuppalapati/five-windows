@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
@@ -21,13 +20,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
       <nav className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
               src="https://images.squarespace-cdn.com/content/v1/67f6d70798529443c8f91162/34de26e2-ce84-4680-9f7d-5489ef8325a0/5Windows.png?format=500w"
               alt="Five Windows"
-              className="h-12 w-auto"
+              className="h-16 md:h-20 w-auto"
             />
           </Link>
 
