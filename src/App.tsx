@@ -13,6 +13,7 @@ import StayConnected from "./pages/StayConnected";
 import InvitationIntro from "./pages/InvitationIntro";
 import InvitationForm from "./pages/InvitationForm";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
