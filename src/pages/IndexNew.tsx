@@ -8,7 +8,7 @@ import heroImage from "@/assets/hero-gold-texture.jpg";
 import fiveWindowsImage from "@/assets/Five Windows.png";
 import picImage from "@/assets/pic.jpg";
 import oceanImage from "@/assets/ocean.jpg";
-import veniceImage from "@/assets/five.png";
+import veniceImage from "@/assets/five.jpg";
 import suiteImage from "@/assets/serene-suite.jpg";
 import mountImage from "@/assets/mount.jpg";
 import shipImage from "@/assets/ship.jpg";
