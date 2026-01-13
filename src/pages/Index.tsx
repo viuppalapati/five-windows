@@ -3,13 +3,9 @@ import Layout from "@/components/layout/Layout";
 import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-gold-texture.jpg";
 import veniceImage from "@/assets/venice-five-windows.jpg";
-import retreatImage from "@/assets/retreat-terrace.jpg";
-import diningImage from "@/assets/intimate-dining.jpg";
+import picImage from "@/assets/pic.jpg";
+import oceanImage from "@/assets/ocean.jpg";
 import suiteImage from "@/assets/serene-suite.jpg";
-import logoCouplesInstitute from "@/assets/logo-couples-institute.webp";
-import logoEducaring from "@/assets/logo-educaring.webp";
-import logoNationalRegister from "@/assets/logo-national-register.webp";
-import logoAPA from "@/assets/logo-apa.webp";
 import VideoModal from "@/components/VideoModal";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 
@@ -75,7 +71,7 @@ const Index = () => {
 
       {/* Hero Section - Full Height with Parallax */}
       <section ref={heroRef} className="relative h-screen w-full overflow-hidden">
-        <motion.div 
+        <motion.div
           className="absolute inset-0 w-full h-full"
           style={{ y: heroY }}
         >
@@ -87,24 +83,48 @@ const Index = () => {
           <div className="absolute inset-0 bg-charcoal/60" />
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="relative z-10 h-full flex flex-col items-center justify-center px-6"
           style={{ opacity: heroOpacity }}
         >
-          <motion.h1 
-            className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-cream text-center tracking-tight"
+          <motion.h1
+            className="font-display text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-cream text-center tracking-tight mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
           >
-            Elevate Your Lasting Love
+            You are the Rare Couple
           </motion.h1>
-          <motion.div 
-            className="w-24 h-[1px] bg-gold-light mt-12"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.8 }}
-          />
+
+          <motion.h2
+            className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-cream/90 text-center tracking-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
+          >
+            The Five Windows Weekend
+          </motion.h2>
+
+          <motion.p
+            className="text-lg md:text-xl lg:text-2xl text-cream/70 text-center mt-6 max-w-2xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.7 }}
+          >
+            Elevating your lasting love
+          </motion.p>
+
+          <motion.a
+            href="mailto:inquiries@drherwitz.com"
+            className="mt-12 border-2 border-cream/80 text-cream/90 px-10 py-4 text-sm tracking-[0.2em] uppercase font-medium bg-transparent hover:bg-cream hover:text-charcoal transition-all duration-300"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.9 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Get in Touch
+          </motion.a>
         </motion.div>
       </section>
 
@@ -134,7 +154,7 @@ const Index = () => {
       {/* Image Break - Full Width */}
       <section className="w-full">
         <HoverImage
-          src={retreatImage}
+          src={picImage}
           alt="Luxury retreat terrace at golden hour"
           className="w-full aspect-[21/9]"
         />
@@ -274,8 +294,8 @@ const Index = () => {
       {/* Two Image Grid */}
       <section className="w-full grid md:grid-cols-2">
         <HoverImage
-          src={diningImage}
-          alt="Intimate candlelit dining"
+          src={oceanImage}
+          alt="Ocean view"
           className="w-full aspect-square"
         />
         <HoverImage
@@ -390,24 +410,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Branding / Credentials Section */}
-      <section className="py-16 md:py-20 bg-teal/10 w-full">
-        <div className="max-w-5xl mx-auto px-8 md:px-16">
-          <ScrollReveal>
-            <p className="text-center text-charcoal/50 text-xs tracking-[0.2em] uppercase mb-10">
-              Professional Affiliations
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <div className="flex items-center justify-center gap-8 md:gap-12 lg:gap-16">
-              <img src={logoCouplesInstitute} alt="Couples Institute" className="h-10 md:h-12 lg:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={logoEducaring} alt="Educaring" className="h-10 md:h-12 lg:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={logoNationalRegister} alt="National Register of Health Service Psychologists" className="h-10 md:h-12 lg:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={logoAPA} alt="American Psychological Association" className="h-10 md:h-12 lg:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+
     </Layout>
   );
 };

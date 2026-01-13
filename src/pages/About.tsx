@@ -160,10 +160,10 @@ const About = () => {
             I'd love to hear from you.
           </p>
           <Button variant="gold" size="lg" asChild>
-            <Link to="/contact">
+            <a href="mailto:inquiries@drherwitz.com">
               Get in Touch
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            </a>
           </Button>
         </div>
       </section>

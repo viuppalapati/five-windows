@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
-import blogImage from "@/assets/blog-five-windows.jpg";
+import mountImage from "@/assets/mount.jpg";
+import shipImage from "@/assets/ship.jpg";
 
 const blogPosts = [
   {
@@ -9,6 +10,7 @@ const blogPosts = [
     title: "Looking Again at What We Thought We Knew",
     excerpt: "I began imagining Five Windows because I had a hunch: that people in long-term couples—people I recognize as my peers—are entering a hard-earned phase of life.",
     date: "December 2024",
+    image: mountImage,
   },
   {
     id: "why-five-windows",
@@ -16,6 +18,7 @@ const blogPosts = [
     title: "Why Five Windows",
     excerpt: "The inquiry that opens Letters for Lasting Love began with a hunch. It formed slowly, and away from home.",
     date: "December 2024",
+    image: shipImage,
   },
 ];
 
@@ -45,7 +48,7 @@ const Blog = () => {
                 <article className="bg-background border border-border/50 overflow-hidden h-full transition-all duration-300 hover:shadow-medium hover:-translate-y-1">
                   <div className="aspect-[16/10] bg-card overflow-hidden">
                     <img
-                      src={blogImage}
+                      src={post.image}
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
@@ -84,12 +87,12 @@ const Blog = () => {
           <p className="text-primary-foreground/80 text-lg mb-8">
             Be the first to receive new letters and updates from Five Windows.
           </p>
-          <Link
-            to="/contact"
+          <a
+            href="mailto:inquiries@drherwitz.com?subject=Subscribe to Five Windows"
             className="inline-block border-2 border-primary-foreground text-primary-foreground px-10 py-4 text-sm tracking-widest uppercase font-semibold hover:bg-primary-foreground hover:text-primary transition-colors"
           >
-            Subscribe
-          </Link>
+            Get in Touch
+          </a>
         </div>
       </section>
     </Layout>
