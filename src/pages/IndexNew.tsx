@@ -286,9 +286,6 @@ const IndexNew = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent" />
                   </div>
-                  <p className="text-cream/50 text-sm italic leading-relaxed pl-4 border-l border-gold/30">
-                    The historic Jewish ghetto of Venice, where five windows signaled a sacred interior
-                  </p>
                 </div>
               </FadeIn>
             </div>
@@ -309,14 +306,6 @@ const IndexNew = () => {
 
               <FadeIn delay={0.15}>
                 <div className="space-y-8">
-                  <p className="text-xl md:text-2xl text-cream/90 leading-[1.6] font-light">
-                    Five Windows comes from the historic Jewish ghetto of Venice, where synagogues were concealed inside ordinary buildings.
-                  </p>
-
-                  <p className="text-lg md:text-xl text-cream/75 leading-relaxed">
-                    From the outside, they were intentionally discreet—almost invisible. But for those who knew, five windows on the façade signaled a sacred interior: a refuge shaped by culture, devotion, resilience, and belonging.
-                  </p>
-
                   <div className="pt-6">
                     <p className="font-display text-3xl md:text-4xl text-gold-light italic leading-[1.3]">
                       Long partnership is much the same.
