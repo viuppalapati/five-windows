@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Backup and temporary files
+src-backup-local/
+*.tar.gz
+
+# Credentials and environment files
+cred.env
+*.env.local
+
+# macOS metadata files
+._*
