@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import IndexNew from "./pages/IndexNew";
+import IndexClean from "./pages/IndexClean";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import SharePerspective from "./pages/SharePerspective";
@@ -25,7 +26,8 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<IndexNew />} />
+          <Route path="/" element={<IndexClean />} />
+          <Route path="/premium" element={<IndexNew />} />
           <Route path="/old" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
