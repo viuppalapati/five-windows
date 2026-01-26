@@ -27,6 +27,8 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<IndexClean />} />
+          <Route path="/v1" element={<Index />} />
+          <Route path="/v2" element={<IndexNew />} />
           <Route path="/premium" element={<IndexNew />} />
           <Route path="/old" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
