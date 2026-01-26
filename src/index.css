@@ -30,19 +30,25 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
 
-    /* Custom Brand Colors */
-    --gold: 43 57% 23%;
-    --gold-light: 43 74% 66%;
-    --gold-dark: 43 57% 18%;
-    --gold-accent: 43 57% 23% / 0.1;
-    --cream: 40 33% 94%;
-    --cream-dark: 40 20% 85%;
-    --charcoal: 0 0% 15%;
-    --charcoal-light: 0 0% 40%;
+    /* Custom Brand Colors - Soft Impressionist Palette */
+    --sky-blue: 207 42% 82%;        /* #BBD4E8 - Primary Background */
+    --sage-green: 100 15% 59%;      /* #8FA883 - Secondary/Accents */
+    --warm-cream: 38 33% 85%;       /* #E8DCC8 - Content Background */
+    --misty-teal: 185 23% 52%;      /* #6B9A9E - Interactive Elements */
+    --charcoal: 0 0% 29%;            /* #4A4A4A - Text/Headers */
+
+    /* Legacy color mappings for compatibility */
+    --gold: 100 15% 59%;             /* Map to sage-green */
+    --gold-light: 100 20% 70%;
+    --gold-dark: 100 15% 45%;
+    --gold-accent: 100 15% 59% / 0.1;
+    --cream: 38 33% 85%;             /* Map to warm-cream */
+    --cream-dark: 38 25% 75%;
+    --charcoal-light: 0 0% 50%;
     --terracotta: 14 65% 60%;
-    --sage: 120 15% 65%;
-    --teal: 180 25% 50%;
-    --teal-dark: 180 25% 25%;
+    --sage: 100 15% 59%;             /* Map to sage-green */
+    --teal: 185 23% 52%;             /* Map to misty-teal */
+    --teal-dark: 185 30% 35%;
     --teal-foreground: 0 0% 100%;
   }
 
@@ -72,19 +78,25 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
 
-    /* Custom Brand Colors - Same in dark mode */
-    --gold: 43 57% 23%;
-    --gold-light: 43 74% 66%;
-    --gold-dark: 43 57% 18%;
-    --gold-accent: 43 57% 23% / 0.1;
-    --cream: 40 33% 94%;
-    --cream-dark: 40 20% 85%;
-    --charcoal: 0 0% 15%;
-    --charcoal-light: 0 0% 40%;
+    /* Custom Brand Colors - Soft Impressionist Palette (Dark Mode) */
+    --sky-blue: 207 42% 82%;
+    --sage-green: 100 15% 59%;
+    --warm-cream: 38 33% 85%;
+    --misty-teal: 185 23% 52%;
+    --charcoal: 0 0% 29%;
+
+    /* Legacy color mappings */
+    --gold: 100 15% 59%;
+    --gold-light: 100 20% 70%;
+    --gold-dark: 100 15% 45%;
+    --gold-accent: 100 15% 59% / 0.1;
+    --cream: 38 33% 85%;
+    --cream-dark: 38 25% 75%;
+    --charcoal-light: 0 0% 50%;
     --terracotta: 14 65% 60%;
-    --sage: 120 15% 65%;
-    --teal: 180 25% 50%;
-    --teal-dark: 180 25% 25%;
+    --sage: 100 15% 59%;
+    --teal: 185 23% 52%;
+    --teal-dark: 185 30% 35%;
     --teal-foreground: 0 0% 100%;
   }
 }
