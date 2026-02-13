@@ -1,21 +1,14 @@
 import { useState, useRef } from "react";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Images
 import fiveWindowsLogo from "@/assets/5Windows.webp";
-import fiveWindowsWhiteLogo from "@/assets/5 Windows White Background Logo.png";
 import hero5Image from "@/assets/14.png";
 import heroMobileImage from "@/assets/19.png";
 import ctaMobileImage from "@/assets/20.png";
-import oceanImage from "@/assets/ocean.jpg";
-import mountImage from "@/assets/mount.jpg";
-import sereneSuiteImage from "@/assets/serene-suite.jpg";
-import fivePairsImage from "@/assets/Five_Pairs.png";
-import topSquaresImage from "@/assets/15.png";
-import picImage from "@/assets/pic.jpg";
 import ctaBackgroundImage from "@/assets/16.png";
 import footerBackgroundImage from "@/assets/17.png";
 
@@ -159,11 +152,8 @@ export default function IndexClean() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20 md:pt-0">
           <FadeIn>
-            <p className="text-[#30302f] text-sm md:text-lg lg:text-xl tracking-[0.3em] uppercase mb-8 font-semibold">
-              You are the
-            </p>
             <h1 className="font-display text-4xl md:text-6xl lg:text-8xl text-[#30302f] mb-8 leading-tight">
-              Rare Couple
+              The Five Windows Weekend
             </h1>
           </FadeIn>
 
@@ -172,11 +162,8 @@ export default function IndexClean() {
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#30302f] mb-12">
-              The Five Windows Weekend
-            </h2>
             <p className="text-xl md:text-2xl text-[#30302f]/90 max-w-3xl mx-auto leading-relaxed font-medium">
-              Elevating your lasting love through intimate conversations in Venice
+              An annual, invitation-only gathering for a small number of couples who have created something strong---and intend to make the next chapter even more pleasurable.
             </p>
           </FadeIn>
 
@@ -200,103 +187,356 @@ export default function IndexClean() {
         </div>
       </section>
 
-      {/* Five Windows Section */}
-      <section id="five-windows-section" className="relative min-h-screen flex items-center justify-center bg-[rgb(249,247,244)] overflow-hidden pt-0 md:pt-24">
-        {/* Background Image with Parallax */}
-        <motion.div
-          className="absolute inset-0 hidden md:block"
-          style={{ x }}
-        >
-          <img
-            src={topSquaresImage}
-            alt="Background pattern"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
+      {/* You Are the Rare Couple Section */}
+      <section id="five-windows-section" className="py-24 md:py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 md:px-12">
+          <FadeIn>
+            <div className="text-center space-y-8">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#30302f] mb-8">
+                You Are the Rare Couple
+              </h2>
+              <div className="w-24 h-[1px] bg-[#8FA883] mx-auto mb-12" />
+              <div className="space-y-6 text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                <p>
+                  You've done it all---the careers, the family, the contributions---and you've done it well.
+                </p>
+                <p>
+                  Best of all, you're still happy to see each other at the end of the day.
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
-          <FadeIn delay={0.15}>
-            <div className="space-y-6 leading-relaxed text-center">
-              <p className="font-display text-3xl md:text-4xl lg:text-[3rem] text-[#30302f]">
-                You've arrived at a stage where time is no longer the scarce resource it once was.
+      {/* What You Know Section */}
+      <section className="py-24 md:py-32 bg-[rgb(249,247,244)]">
+        <div className="max-w-5xl mx-auto px-6 md:px-12">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#30302f] mb-8">
+                What You Know
+              </h2>
+              <div className="w-24 h-[1px] bg-[#8FA883] mx-auto" />
+            </div>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {[
+              "The crowded decades when everything demanded attention at once are behind you.",
+              "Your commitment to each other is solid.",
+              "Individual fulfillment translates into better together.",
+              "Love thrives when you give it the time and attention it deserves.",
+              "The future of your marriage is too important to leave to chance, inertia or complacency.",
+              "The years ahead---when good health, energy, and choice align---won't last forever."
+            ].map((item, index) => (
+              <FadeIn key={index} delay={0.1 + index * 0.1}>
+                <div className="text-center md:text-left">
+                  <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                    {item}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What No Longer Fits Section */}
+      <section className="py-24 md:py-32 bg-[#4A4A4A]">
+        <div className="max-w-4xl mx-auto px-6 md:px-12">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-8">
+                What No Longer Fits
+              </h2>
+              <div className="w-24 h-[1px] bg-[#8FA883] mx-auto" />
+            </div>
+          </FadeIn>
+
+          <div className="space-y-8 max-w-3xl mx-auto text-center">
+            <FadeIn delay={0.1}>
+              <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                An outdated vision of your future together.
               </p>
-              <p className="font-display text-3xl md:text-4xl lg:text-[3rem] text-[#30302f] italic my-8">
-                And yet—
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                Arrangements shaped long ago.
               </p>
-              <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80">
-                has it occurred to you how valuable it could be to set aside a few days in an elegant setting to consider how this chapter might be more fully enjoyed together?
+            </FadeIn>
+            <FadeIn delay={0.3}>
+              <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                Roles that no longer reflect who you've become.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.4}>
+              <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                Desires unspoken.
+              </p>
+            </FadeIn>
+
+            <FadeIn delay={0.5}>
+              <div className="pt-8">
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white italic leading-relaxed">
+                  Without intention, these will never surface.
+                </p>
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white italic leading-relaxed mt-4">
+                  Assumptions will take their place.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.6}>
+              <div className="pt-8">
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                  And yet, there are few resources for couples who can imagine the value of having a roadmap for the years ahead.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Why the Five Windows Weekend Exists Section */}
+      <section className="py-24 md:py-32 bg-[rgb(249,247,244)]">
+        <div className="max-w-5xl mx-auto px-6 md:px-12">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#30302f] mb-8">
+                Why the Five Windows Weekend Exists
+              </h2>
+              <div className="w-24 h-[1px] bg-[#8FA883] mx-auto" />
+            </div>
+          </FadeIn>
+
+          <div className="space-y-8 max-w-4xl mx-auto">
+            <FadeIn delay={0.1}>
+              <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed text-center">
+                The Five Windows Weekend exists for couples exactly here.
+              </p>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                It's an annual, invitation-only gathering for a small number of couples who have created something strong and want the next chapter of their marriage to be fun, stimulating and fulfilling.
+              </p>
+            </FadeIn>
+
+            <FadeIn delay={0.3}>
+              <div className="space-y-6 pt-8">
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                  You'll have conversations guided by people who understand long marriages---without dramatizing them.
+                </p>
+                <div className="pl-8 space-y-4">
+                  <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                    Not to revisit the past.
+                  </p>
+                  <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                    Not to diagnose or repair.
+                  </p>
+                  <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                    Not to tell you who you should be.
+                  </p>
+                  <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                    But to ask---and answer--- the questions that will shape the years ahead.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.4}>
+              <div className="space-y-6 pt-8">
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                  Held in a setting chosen for privacy and natural beauty, the weekend creates space that ordinary life rarely allows to access deeper longings.
+                </p>
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                  Time to enjoy what you share---and leave with something genuinely valuable to carry forward.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.5}>
+              <div className="space-y-6 pt-8">
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                  You'll meet couples who are similarly happy, active, and engaged with life.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.6}>
+              <div className="pt-8">
+                <h3 className="font-display text-2xl md:text-3xl text-[#30302f] mb-6 text-center">
+                  And you'll clarify, together, how to:
+                </h3>
+                <ul className="space-y-4 pl-8">
+                  <li className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                    remain close without losing yourselves
+                  </li>
+                  <li className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                    stay open to what matters most to your partner as circumstances change
+                  </li>
+                  <li className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                    Balance independence and partnership
+                  </li>
+                  <li className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                    keep physical intimacy and pleasure alive
+                  </li>
+                  <li className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                    shape a future that reflects who you are now
+                  </li>
+                </ul>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* What Changes Section */}
+      <section className="py-24 md:py-32 bg-[#6B9A9E]">
+        <div className="max-w-5xl mx-auto px-6 md:px-12">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-8">
+                What Changes
+              </h2>
+              <div className="w-24 h-[1px] bg-[#8FA883] mx-auto" />
+            </div>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <FadeIn delay={0.1}>
+              <div className="space-y-6">
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                  You leave with confidence.
+                </p>
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                  About how you speak openly---without friction.
+                </p>
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                  About how roles can be adjusted with respect.
+                </p>
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                  About how closeness deepens, rather than fades, over time.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <div className="space-y-6">
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                  You feel more understood.
+                </p>
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                  More connected.
+                </p>
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                  More prepared for what lies ahead.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={0.3}>
+            <div className="text-center mt-12 space-y-6">
+              <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                And reassured.
+              </p>
+              <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                Similar couples are having the same conversations.
               </p>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* The Experience Section */}
-      <section className="py-24 md:py-32 bg-[#6B9A9E]">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
+      {/* What This Is Not Section */}
+      <section className="py-24 md:py-32 bg-[rgb(249,247,244)]">
+        <div className="max-w-5xl mx-auto px-6 md:px-12">
           <FadeIn>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="font-display text-3xl md:text-4xl lg:text-[3em] text-white mb-8">
-                The Five Windows Weekend exists for this moment.
+            <div className="text-center mb-16">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#30302f] mb-8">
+                What This Is Not
               </h2>
               <div className="w-24 h-[1px] bg-[#8FA883] mx-auto" />
             </div>
           </FadeIn>
 
-          <div className="grid lg:grid-cols-[1fr,400px] gap-12 items-start mt-12">
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <FadeIn delay={0.1}>
+              <div className="space-y-4">
+                <p className="font-display text-2xl md:text-3xl text-[#30302f]">
+                  This is not therapy.
+                </p>
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                  No dredging up the past or hurt feelings.
+                </p>
+              </div>
+            </FadeIn>
+
             <FadeIn delay={0.2}>
-              <div className="space-y-6 text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
-                <p>
-                  An annual, invitation-only gathering for couples who have built something strong and want to discover how to take even more pleasure in one another as they grow into this next chapter.
+              <div className="space-y-4">
+                <p className="font-display text-2xl md:text-3xl text-[#30302f]">
+                  This is not an open invitation.
                 </p>
-                <p>
-                  Held in a place where the natural beauty reflects what you have created together and inspires you to access deeper longings that don't emerge during the day-to-day.
-                </p>
-                <p>
-                  Guided by steady hands so you stay focused on the future without being distracted by the past.
-                </p>
-                <p>
-                  A break to ask and answer the questions essential to living and loving well.
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                  Every couple is carefully vetted. Privacy and fit are essential.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <div className="sticky top-32">
-                <img
-                  src={sereneSuiteImage}
-                  alt="Serene suite"
-                  className="w-full aspect-[4/5] object-cover rounded-lg"
-                />
+              <div className="space-y-4">
+                <p className="font-display text-2xl md:text-3xl text-[#30302f]">
+                  This is not about uniform answers.
+                </p>
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                  Each couple finds what fits them.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.4}>
+              <div className="space-y-4">
+                <p className="font-display text-2xl md:text-3xl text-[#30302f]">
+                  And this is not hard work.
+                </p>
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+                  The setting is elegant, comfortable, and designed for ease so you can enjoy your surroundings.
+                </p>
               </div>
             </FadeIn>
           </div>
+        </div>
+      </section>
 
-          <FadeIn delay={0.4}>
-            <div className="flex flex-col md:grid md:grid-cols-4 gap-8 mt-16 max-w-6xl mx-auto items-center">
-              {[
-                "No therapy.",
-                "No performing.",
-                "No demands.",
-                "No fixing."
-              ].map((item, index) => (
-                <div key={index} className="text-center">
-                  <p className="font-display text-[1.25em] font-semibold text-white whitespace-nowrap">{item}</p>
-                </div>
-              ))}
+      {/* A Note for the Reluctant Partner Section */}
+      <section className="py-24 md:py-32 bg-[#4A4A4A]">
+        <div className="max-w-3xl mx-auto px-6 md:px-12">
+          <FadeIn>
+            <div className="text-center space-y-8">
+              <h3 className="font-display text-2xl md:text-3xl lg:text-4xl text-white mb-8">
+                A Note for the Reluctant Partner
+              </h3>
+              <div className="w-24 h-[1px] bg-[#8FA883] mx-auto mb-8" />
+              <div className="space-y-6">
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                  This is not about changing your marriage.
+                </p>
+                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                  It's about being thoughtful with it at a moment that matters.
+                </p>
+              </div>
             </div>
           </FadeIn>
         </div>
       </section>
 
       {/* Why Five Windows Section */}
-      <section className="py-24 md:py-32 bg-[rgb(249,247,244)]">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 md:px-12">
           <FadeIn>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-[#8FA883] text-base md:text-lg lg:text-[1.75em] font-semibold tracking-[0.3em] uppercase mb-4">
-                The Meaning
-              </p>
+            <div className="text-center mb-16">
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#30302f] mb-8">
                 Why "Five Windows"
               </h2>
@@ -304,27 +544,65 @@ export default function IndexClean() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.2}>
-            <div className="space-y-6 text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed max-w-3xl mx-auto text-center">
-              <p className="font-display text-[1.25em] md:text-xl lg:text-2xl text-[#6B9A9E] italic font-semibold">
-                Long partnership is much the same.
+          <div className="space-y-6 text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed text-center max-w-3xl mx-auto">
+            <FadeIn delay={0.1}>
+              <p>
+                The name comes from the historic Jewish ghetto of Venice,
               </p>
-            </div>
-          </FadeIn>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <p>
+                where synagogues were concealed inside ordinary buildings.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.3}>
+              <p>
+                From the outside, they were intentionally discreet---almost invisible.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.4}>
+              <p>
+                But for those who knew,
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.5}>
+              <p>
+                five windows on the façade signaled a sacred interior:
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.6}>
+              <p>
+                a refuge shaped by culture, devotion, resilience, and belonging.
+              </p>
+            </FadeIn>
 
-          <div className="space-y-6 max-w-4xl mx-auto mt-12">
-            {[
-              "Extraordinary without display.",
-              "Cherished by those who live inside it.",
-              "Recognizable only to those who have traveled this far.",
-              "A legacy worth maintaining."
-            ].map((item, index) => (
-              <FadeIn key={index} delay={0.3 + index * 0.1}>
-                <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 text-center">
-                  {item}
+            <FadeIn delay={0.7}>
+              <div className="pt-8">
+                <p className="font-display text-[1.25em] md:text-xl lg:text-2xl text-[#6B9A9E] italic font-semibold">
+                  Long partnerships are much the same.
                 </p>
-              </FadeIn>
-            ))}
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.8}>
+              <div className="space-y-6 pt-8">
+                <p>Extraordinary without display.</p>
+                <p>Cherished by those inside them.</p>
+                <p>Recognizable only to those who have traveled this far.</p>
+                <p>A legacy worth maintaining.</p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.9}>
+              <div className="pt-8">
+                <p>
+                  Five Windows exists to honor that kind of relationship---
+                </p>
+                <p>
+                  and to offer it the attention it deserves.
+                </p>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -386,56 +664,35 @@ export default function IndexClean() {
             ))}
           </div>
 
-          <FadeIn delay={0.7}>
-            <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed max-w-4xl mx-auto mt-12">
-              Conversations are structured, private, and intentionally paced. There is time together, time apart, and time to simply enjoy the setting you're in.
-            </p>
-          </FadeIn>
         </div>
       </section>
 
-      {/* For Couples Who Section */}
-      <section className="py-12 md:py-16 bg-[#4A4A4A]">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
+      {/* The Opportunity Section */}
+      <section className="py-24 md:py-32 bg-[#6B9A9E]">
+        <div className="max-w-4xl mx-auto px-6 md:px-12">
           <FadeIn>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-[#8FA883] text-base md:text-lg lg:text-[1.75em] font-semibold tracking-[0.3em] uppercase mb-4">
-                For You
-              </p>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-white">
-                Five Windows is for couples who:
+            <div className="text-center space-y-8">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-8">
+                The Opportunity
               </h2>
-              <div className="w-24 h-[1px] bg-[#8FA883] mx-auto mt-8" />
+              <div className="w-24 h-[1px] bg-[#8FA883] mx-auto mb-12" />
+              <div className="space-y-6 text-[1.25em] md:text-xl lg:text-[1.75em] text-white/90 leading-relaxed">
+                <p>
+                  Strong marriages do not maintain themselves by accident.
+                </p>
+                <p>
+                  They are tended---selectively, intelligently, and at the right moments.
+                </p>
+                <p className="font-display text-2xl md:text-3xl text-white italic pt-4">
+                  This is one of those moments.
+                </p>
+              </div>
             </div>
           </FadeIn>
-
-          <div className="space-y-12 max-w-4xl mx-auto mt-12">
-            {[
-              "Have been together for decades and still enjoy each other's company",
-              "Feel proud of and grateful for what they've built",
-              "Value privacy, discretion and autonomy",
-              "Are not interested in therapy or self-improvement programs",
-              "Support one another willingly through occasional inconvenience",
-              "Are comfortable in exquisite accommodations in beautiful places"
-            ].map((item, index) => (
-              <FadeIn key={index} delay={index * 0.05}>
-                <div className="flex items-start gap-6">
-                  <div className="text-[#8FA883] text-6xl flex-shrink-0 leading-none">
-                    ☞
-                  </div>
-                  <p className="text-white/90 text-[1.25em] md:text-xl lg:text-[1.75em] leading-relaxed">
-                    {item}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-
-
         </div>
       </section>
 
-      {/* Final CTA Section */}
+      {/* Next Step CTA Section */}
       <section ref={ctaRef} className="relative py-24 md:py-32 bg-[rgb(249,247,244)] overflow-hidden">
         {/* Background Image for Mobile */}
         <motion.div className="absolute inset-0 md:hidden" style={{ x: ctaX }}>
@@ -457,15 +714,30 @@ export default function IndexClean() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-12 text-center">
           <FadeIn>
-            <p className="text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 mb-12">
-              Five Windows is named to honor that kind of life together—and to give it the attention it deserves.
-            </p>
-            <a href="mailto:inquiries@drherwitz.com">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-[#30302f] mb-8">
+              Next Step
+            </h2>
+            <div className="w-24 h-[1px] bg-[#8FA883] mx-auto mb-12" />
+            <div className="space-y-6 text-[1.25em] md:text-xl lg:text-[1.75em] text-[#30302f]/80 leading-relaxed">
+              <p>
+                If this resonates, the next step is simple.
+              </p>
+              <p>
+                Email me to arrange a private conversation with you and your spouse.
+              </p>
+              <p>
+                We'll explore---without obligation---whether the Five Windows Weekend is right for you.
+              </p>
+              <p className="italic pt-4">
+                Some conversations are worth having sooner rather than later.
+              </p>
+            </div>
+            <a href="mailto:inquiries@drherwitz.com" className="inline-block mt-8">
               <Button
                 size="lg"
                 className="bg-[#6B9A9E] hover:bg-[#6B9A9E]/90 text-white px-8 py-6 text-lg"
               >
-                Begin the Conversation
+                inquiries@drherwitz.com
               </Button>
             </a>
           </FadeIn>

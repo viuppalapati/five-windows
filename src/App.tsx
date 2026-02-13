@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import IndexNew from "./pages/IndexNew";
 import IndexClean from "./pages/IndexClean";
+import IndexCleanBackup from "./pages/IndexClean.backup.20260214";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import SharePerspective from "./pages/SharePerspective";
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/" element={<IndexClean />} />
           <Route path="/v1" element={<Index />} />
           <Route path="/v2" element={<IndexNew />} />
+          <Route path="/v3" element={<IndexCleanBackup />} />
           <Route path="/premium" element={<IndexNew />} />
           <Route path="/old" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
